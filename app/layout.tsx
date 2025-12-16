@@ -18,7 +18,7 @@ const fredoka = Fredoka({
 })
 
 export const metadata: Metadata = {
-  title: 'AI Сурах Туслах - Хүүхдэд зориулсан',
+  title: 'AI Туслах - Хүүхдэд зориулсан ухаалаг туслах',
   description: 'Хүүхдэд зориулсан AI туслах систем',
 }
 
