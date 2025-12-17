@@ -22,6 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install 
+        run: npm ci
+    
+      - name: Ensure TypeScript is installed
+        run: npm install --save-dev typescript
+
       - name: Run tests
         run: npm run test --if-present
 
