@@ -11,13 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # Public envs (required at build time)
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
       NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-
-      # Optional – only if used server-side
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-
       NODE_ENV: production
 
     steps:
@@ -27,13 +22,13 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: 20
           cache: 'npm'
 
       - name: 📦 Install dependencies
         run: npm ci
 
-      - name: 🔍 Type check (optional but recommended)
+      - name: 🔍 Type check (optional)
         run: npm run typecheck --if-present
 
       - name: 🔨 Build project
@@ -43,6 +38,5 @@ jobs:
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "✅ CI Pipeline Successful!"
-          echo "📊 Build: Passed"
-          echo "🎉 Ready for deployment!"
+          echo "🎉 Build completed successfully"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
