@@ -421,7 +421,7 @@ export default function AuthPageContent() {
         {activeTab === 'signup' && (
           <form onSubmit={handleSignUp} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 'bold', textAlign: 'center', color: '#1f2937', marginBottom: '4px' }}>
-              Шинэ данс үүсгэх
+              Шинэ бүртгэл үүсгэх
             </h2>
 
             <input
