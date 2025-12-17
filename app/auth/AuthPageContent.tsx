@@ -241,7 +241,7 @@ export default function AuthPageContent() {
               marginBottom: '12px',
             }}
           >
-            🎓 AI Сурах Туслах
+            🎓 AI Туслах
           </h1>
           <div 
             style={{
